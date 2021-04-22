@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-import 'package:syncfusion_flutter_core/core.dart';
 
 void main() {
-  // Register your license here
-  SyncfusionLicense.registerLicense(null);
   return runApp(MyApp());
 }
 
@@ -31,6 +28,14 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  late ZoomPanBehavior zoomPanBehavior;
+
+  @override
+  void initState() {
+    zoomPanBehavior = ZoomPanBehavior(enablePanning: true);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,16 +45,10 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Container(
           child: SfCartesianChart(
+              zoomPanBehavior: zoomPanBehavior,
               primaryXAxis: NumericAxis(
-                visibleMinimum: 4, 
-                visibleMaximum: 7,
-                interval:1
-              ),
+                  visibleMinimum: 4, visibleMaximum: 7, interval: 1),
               title: ChartTitle(text: 'Sales analysis'),
-              tooltipBehavior: TooltipBehavior(enable: true),
-              zoomPanBehavior: ZoomPanBehavior(
-                enablePanning: true
-              ),
               series: <ChartSeries<SalesData, double>>[
                 LineSeries<SalesData, double>(
                     dataSource: <SalesData>[
