@@ -48,10 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Container(
           child: SfCartesianChart(
               primaryXAxis: NumericAxis(
-                visibleMinimum: 4, 
-                visibleMaximum: 7,
-                interval:1
-              ),
+                  visibleMinimum: 4, visibleMaximum: 7, interval: 1),
               title: ChartTitle(text: 'Sales analysis'),
               tooltipBehavior: _tooltipBehavior,
               zoomPanBehavior: _zoomPanBehavior,
