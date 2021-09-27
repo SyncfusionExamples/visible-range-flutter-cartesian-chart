@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-import 'package:syncfusion_flutter_core/core.dart';
-
 void main() {
-  // Register your license here
-  SyncfusionLicense.registerLicense(null);
   return runApp(MyApp());
 }
 
@@ -22,7 +18,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -31,8 +27,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  ZoomPanBehavior _zoomPanBehavior;
-  TooltipBehavior _tooltipBehavior;
+  late ZoomPanBehavior _zoomPanBehavior;
+  late TooltipBehavior _tooltipBehavior;
 
   @override
   void initState(){
