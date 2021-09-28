@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-
 void main() {
   return runApp(MyApp());
 }
@@ -28,14 +27,17 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  late ZoomPanBehavior zoomPanBehavior;
+  late ZoomPanBehavior _zoomPanBehavior;
+  late TooltipBehavior _tooltipBehavior;
 
   @override
-  void initState() {
-    zoomPanBehavior = ZoomPanBehavior(enablePanning: true);
+  void initState(){
+    _zoomPanBehavior = ZoomPanBehavior(
+                enablePanning: true
+              );
+    _tooltipBehavior =TooltipBehavior(enable: true);
     super.initState();
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,10 +47,11 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Container(
           child: SfCartesianChart(
-              zoomPanBehavior: zoomPanBehavior,
               primaryXAxis: NumericAxis(
                   visibleMinimum: 4, visibleMaximum: 7, interval: 1),
               title: ChartTitle(text: 'Sales analysis'),
+              tooltipBehavior: _tooltipBehavior,
+              zoomPanBehavior: _zoomPanBehavior,
               series: <ChartSeries<SalesData, double>>[
                 LineSeries<SalesData, double>(
                     dataSource: <SalesData>[
