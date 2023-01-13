@@ -1,17 +1,16 @@
-# Render particular part of a data in the Flutter Cartesian charts
+# visible_range_cartesian
 
-A quick-start example to help you add the Syncfusion Flutter Charts package to a Flutter app. You will learn how to add a Cartesian chart to a Flutter project. SfCartesianChart widget provides support to view the required set of data from a larger collection. This can be achieved using the visibleMinimum and visibleMaximum properties of an axis. 
+A new Flutter project.
 
-Documentation: https://help.syncfusion.com/flutter/cartesian-charts/axis-customization#visible-minimum , https://help.syncfusion.com/flutter/cartesian-charts/axis-customization#visible-maximum 
+## Getting Started
 
-## Requirements to run the demo
-* [VS Code](https://code.visualstudio.com/download)
-* [Flutter SDK v2.0.0+](https://flutter.dev/docs/development/tools/sdk/overview)
-* [For more development tools](https://flutter.dev/docs/development/tools/devtools/overview)
+This project is a starting point for a Flutter application.
 
-## How to run this application
-To run this application, you need to first clone or download the ‘visible range flutter cartesian chart’ repository and open it in your preferred IDE. Then, build and run your project to view the output.
+A few resources to get you started if this is your first Flutter project:
 
-## Further help
-For more help, check the [Syncfusion Flutter documentation](https://help.syncfusion.com/flutter/introduction/overview), or
- [Flutter documentation](https://flutter.dev/docs/get-started/install).
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
