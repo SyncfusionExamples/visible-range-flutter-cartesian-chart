@@ -49,12 +49,14 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: SfCartesianChart(
-            primaryXAxis:
-                NumericAxis(visibleMinimum: 4, visibleMaximum: 7, interval: 1),
+            primaryXAxis: NumericAxis(
+                initialVisibleMinimum: 4,
+                initialVisibleMaximum: 7,
+                interval: 1),
             title: ChartTitle(text: 'Sales analysis'),
             tooltipBehavior: _tooltipBehavior,
             zoomPanBehavior: _zoomPanBehavior,
-            series: <ChartSeries<SalesData, double>>[
+            series: <LineSeries<SalesData, double>>[
               LineSeries<SalesData, double>(
                   dataSource: <SalesData>[
                     SalesData(1, 35),
